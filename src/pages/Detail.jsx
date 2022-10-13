@@ -22,7 +22,7 @@ const Detail = () => {
       <StyleDialog>
         <div>
           <StyleDialogHeader>
-            <div>ID:{todo.id}</div>
+            <div>ID:{todo?.id}</div>
             <Button
               onClick={() => {
                 navigate("/");
@@ -31,9 +31,9 @@ const Detail = () => {
               뒤로 가기
             </Button>
           </StyleDialogHeader>
-          <H1>{todo.title}</H1> <Content>{todo.content}</Content>
+          <H1>{todo?.title}</H1> <Content>{todo?.content}</Content>
         </div>
-        </StyleDialog>
+      </StyleDialog>
     </StyleContainer>
   );
 };
