@@ -27,6 +27,7 @@ const initialState = {
     { id: 1, title: "Hi", content: "Hey", isDone: false },
     { id: 2, title: "Bye", content: "See you", isDone: true },
   ],
+  todo: { id: 3, title: "", content: "", isDone: false },
 };
 
 // Reducer
