@@ -6,7 +6,7 @@ import { getId } from "../redux/modules/todos";
 
 const Detail = () => {
   const dispatch = useDispatch();
-  const todo = useSelector((state) => state.todos.todo);
+  const todo = useSelector((state) => state.todos.todos);
 
   const { id } = useParams(); // useParams는 문자열로 들어옴. 해당 id를 숫자열로 바꿔주어야함.
   const navigate = useNavigate();
@@ -14,8 +14,6 @@ const Detail = () => {
   useEffect(() => {
     dispatch(getId(Number(id)));
   }, [dispatch, id]);
-
-  console.log(todo);
 
   return (
     <StyleContainer>

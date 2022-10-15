@@ -27,7 +27,6 @@ const initialState = {
     { id: 1, title: "Hi", content: "Hey", isDone: false },
     { id: 2, title: "Bye", content: "See you", isDone: true },
   ],
-  todo: { id: 3, title: "", content: "", isDone: false },
 };
 
 // Reducer
@@ -56,7 +55,7 @@ const todos = (state = initialState, action) => {
     case DETAIL_MATCHING_ID:
       return {
         ...state,
-        todo: state.todos.find((todo) => {
+        todos: state.todos.find((todo) => {
           // 배열 요소 순차순회하며 조건에 일치하는 값 반환
           return todo.id === action.payload;
           // todo id를 비교해서 맞는걸 리턴
